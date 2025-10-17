@@ -19,14 +19,14 @@ export const Hero: React.FC = () => {
   const { scrollY } = useScroll();
   
   // Parallax transforms - very gentle, subtle movement
-  const y1 = useTransform(scrollY, [0, 800], [0, -50]);
-  const y2 = useTransform(scrollY, [0, 800], [0, -30]);
-  const y3 = useTransform(scrollY, [0, 800], [0, -15]);
+  const y1 = useTransform(scrollY, [0, 1000], [0, -30]);
+  const y2 = useTransform(scrollY, [0, 1000], [0, -20]);
+  const y3 = useTransform(scrollY, [0, 1000], [0, -10]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 8000); // Much longer to let each image be fully appreciated
+    }, 12000); // Much longer to let each image be fully appreciated
 
     return () => clearInterval(interval);
   }, []);
@@ -43,13 +43,13 @@ export const Hero: React.FC = () => {
           style={{ y: y1 }}
           className="absolute inset-0 w-full h-full"
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={currentImageIndex}
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 0.6, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 2.5, ease: "easeInOut" }}
+              transition={{ duration: 4, ease: "easeInOut" }}
               className="w-full h-full bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(${heroImages[currentImageIndex]})`,
@@ -61,37 +61,6 @@ export const Hero: React.FC = () => {
           </AnimatePresence>
         </motion.div>
 
-        {/* Parallax layer 2 - Secondary image (next in sequence) */}
-        <motion.div
-          style={{ y: y2 }}
-          className="absolute inset-0 w-full h-full opacity-30"
-        >
-          <div
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${heroImages[(currentImageIndex + 1) % heroImages.length]})`,
-              backgroundSize: 'contain',
-              backgroundPosition: 'center center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          />
-        </motion.div>
-
-        {/* Parallax layer 3 - Third image for depth */}
-        <motion.div
-          style={{ y: y3 }}
-          className="absolute inset-0 w-full h-full opacity-20"
-        >
-          <div
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${heroImages[(currentImageIndex + 2) % heroImages.length]})`,
-              backgroundSize: 'contain',
-              backgroundPosition: 'center center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          />
-        </motion.div>
       </div>
 
       {/* Content with Parallax */}
