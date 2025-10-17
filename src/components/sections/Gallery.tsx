@@ -7,133 +7,133 @@ import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/2
 const galleryImages = [
   {
     id: '1',
-    src: '/images/Screenshot 2025-10-17 at 2.32.07 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.32.07%20PM.png',
     alt: 'Beautiful box braids styling',
     category: 'Box Braids',
     description: 'Classic box braids with premium hair extensions'
   },
   {
     id: '2',
-    src: '/images/Screenshot 2025-10-17 at 2.33.04 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.33.04%20PM.png',
     alt: 'Elegant goddess braids with curls',
     category: 'Goddess Braids',
     description: 'Stunning goddess braids with added curls and waves'
   },
   {
     id: '3',
-    src: '/images/Screenshot 2025-10-17 at 2.33.26 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.33.26%20PM.png',
     alt: 'Traditional cornrow patterns',
     category: 'Cornrows',
     description: 'Traditional African cornrow braids in various patterns'
   },
   {
     id: '4',
-    src: '/images/Screenshot 2025-10-17 at 2.33.47 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.33.47%20PM.png',
     alt: 'Stylish faux locs',
     category: 'Faux Locs',
     description: 'Beautiful faux locs that mimic natural dreadlocks'
   },
   {
     id: '5',
-    src: '/images/Screenshot 2025-10-17 at 2.34.23 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.34.23%20PM.png',
     alt: 'Medium length box braids',
     category: 'Box Braids',
     description: 'Medium length box braids with natural styling'
   },
   {
     id: '6',
-    src: '/images/Screenshot 2025-10-17 at 2.34.34 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.34.34%20PM.png',
     alt: 'Long goddess braids',
     category: 'Goddess Braids',
     description: 'Long goddess braids with elegant curls'
   },
   {
     id: '7',
-    src: '/images/Screenshot 2025-10-17 at 2.34.53 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.34.53%20PM.png',
     alt: 'Boho style braids',
     category: 'Boho Braids',
     description: 'Trendy boho-style braids with loose waves'
   },
   {
     id: '8',
-    src: '/images/Screenshot 2025-10-17 at 2.35.10 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.35.10%20PM.png',
     alt: 'Children braids styling',
     category: 'Children Braids',
     description: 'Gentle braiding for children with beautiful results'
   },
   {
     id: '9',
-    src: '/images/Screenshot 2025-10-17 at 2.35.37 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.35.37%20PM.png',
     alt: 'Braid maintenance service',
     category: 'Maintenance',
     description: 'Professional braid maintenance and touch-ups'
   },
   {
     id: '10',
-    src: '/images/Screenshot 2025-10-17 at 2.36.34 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.36.34%20PM.png',
     alt: 'Professional braiding work',
     category: 'Box Braids',
     description: 'Expert braiding techniques with beautiful results'
   },
   {
     id: '11',
-    src: '/images/Screenshot 2025-10-17 at 2.36.51 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.36.51%20PM.png',
     alt: 'Stylish hair braiding',
     category: 'Goddess Braids',
     description: 'Elegant styling with professional attention to detail'
   },
   {
     id: '12',
-    src: '/images/Screenshot 2025-10-17 at 2.37.40 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.37.40%20PM.png',
     alt: 'Beautiful braid work',
     category: 'Cornrows',
     description: 'Traditional patterns with modern styling'
   },
   {
     id: '13',
-    src: '/images/Screenshot 2025-10-17 at 2.38.01 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.38.01%20PM.png',
     alt: 'Professional hair styling',
     category: 'Faux Locs',
     description: 'Expert faux locs installation and styling'
   },
   {
     id: '14',
-    src: '/images/Screenshot 2025-10-17 at 2.38.10 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.38.10%20PM.png',
     alt: 'Magic Braiding work',
     category: 'Boho Braids',
     description: 'Beautiful boho-style braids with natural waves'
   },
   {
     id: '15',
-    src: '/images/Screenshot 2025-10-17 at 2.38.36 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.38.36%20PM.png',
     alt: 'Expert braiding services',
     category: 'Children Braids',
     description: 'Gentle and professional braiding for children'
   },
   {
     id: '16',
-    src: '/images/Screenshot 2025-10-17 at 2.38.58 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.38.58%20PM.png',
     alt: 'Professional hair care',
     category: 'Maintenance',
     description: 'Ongoing maintenance and care for beautiful braids'
   },
   {
     id: '17',
-    src: '/images/Screenshot 2025-10-17 at 2.39.29 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.39.29%20PM.png',
     alt: 'Magic Braiding portfolio',
     category: 'Box Braids',
     description: 'Showcasing our professional braiding expertise'
   },
   {
     id: '18',
-    src: '/images/Screenshot 2025-10-17 at 2.40.00 PM.png',
+    src: '/images/Screenshot%202025-10-17%20at%202.40.00%20PM.png',
     alt: 'Beautiful hair transformations',
     category: 'Goddess Braids',
     description: 'Stunning transformations with goddess braids'
   },
   {
     id: '19',
-    src: '/images/Screenshot 2025-10-14 at 12.51.27 AM.png',
+    src: '/images/Screenshot%202025-10-14%20at%2012.51.27%20AM.png',
     alt: 'Additional Magic Braiding work',
     category: 'Box Braids',
     description: 'More examples of our professional braiding services'
@@ -234,11 +234,7 @@ export const Gallery: React.FC = () => {
                   alt={image.alt}
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <h3 className="text-white font-semibold text-lg mb-2">{image.category}</h3>
-                  <p className="text-white/90 text-sm">{image.description}</p>
-                </div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
               </div>
             </motion.div>
           ))}
@@ -288,10 +284,6 @@ export const Gallery: React.FC = () => {
                   className="w-full h-full object-contain rounded-lg"
                 />
 
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg">
-                  <h3 className="text-white font-semibold text-xl mb-2">{selectedImage.category}</h3>
-                  <p className="text-white/90">{selectedImage.description}</p>
-                </div>
               </motion.div>
             </motion.div>
           )}
