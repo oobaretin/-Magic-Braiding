@@ -18,15 +18,15 @@ export const Hero: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { scrollY } = useScroll();
   
-  // Parallax transforms
-  const y1 = useTransform(scrollY, [0, 300], [0, -150]);
-  const y2 = useTransform(scrollY, [0, 300], [0, -100]);
-  const y3 = useTransform(scrollY, [0, 300], [0, -50]);
+  // Parallax transforms - very gentle, subtle movement
+  const y1 = useTransform(scrollY, [0, 800], [0, -50]);
+  const y2 = useTransform(scrollY, [0, 800], [0, -30]);
+  const y3 = useTransform(scrollY, [0, 800], [0, -15]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 5000); // Slightly longer for parallax effect
+    }, 8000); // Much longer to let each image be fully appreciated
 
     return () => clearInterval(interval);
   }, []);
@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 0.6, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
+              transition={{ duration: 2.5, ease: "easeInOut" }}
               className="w-full h-full bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(${heroImages[currentImageIndex]})`,
