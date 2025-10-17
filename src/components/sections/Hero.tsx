@@ -1,19 +1,48 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { useBooking } from '@/components/booking/BookingProvider';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const heroImages = [
+  '/images/gallery/box-braids-1.jpg',
+  '/images/gallery/goddess-braids-1.jpg',
+  '/images/gallery/cornrows-1.jpg',
+  '/images/gallery/faux-locs-1.jpg',
+  '/images/gallery/boho-braids-1.jpg',
+];
 
 export const Hero: React.FC = () => {
   const { openBookingModal } = useBooking();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+      {/* Background Slideshow */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-primary-700 z-10" />
-        <div className="w-full h-full bg-[url('/images/hero-braids.jpg')] bg-cover bg-center bg-no-repeat opacity-20" />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.3 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full h-full bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${heroImages[currentImageIndex]})`
+            }}
+          />
+        </AnimatePresence>
       </div>
 
       {/* Content */}
@@ -67,12 +96,32 @@ export const Hero: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Slideshow Indicators */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2"
+      >
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImageIndex(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentImageIndex
+                ? 'bg-white scale-125'
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+          />
+        ))}
+      </motion.div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20"
       >
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
           <motion.div
