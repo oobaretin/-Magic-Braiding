@@ -130,6 +130,13 @@ const galleryImages = [
     alt: 'Beautiful hair transformations',
     category: 'Goddess Braids',
     description: 'Stunning transformations with goddess braids'
+  },
+  {
+    id: '19',
+    src: '/images/Screenshot 2025-10-14 at 12.51.27 AM.png',
+    alt: 'Additional Magic Braiding work',
+    category: 'Box Braids',
+    description: 'More examples of our professional braiding services'
   }
 ];
 
