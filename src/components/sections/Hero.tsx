@@ -34,14 +34,15 @@ export const Hero: React.FC = () => {
           <motion.div
             key={currentImageIndex}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
+            animate={{ opacity: 0.4 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${heroImages[currentImageIndex]})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center center'
+              backgroundSize: 'contain',
+              backgroundPosition: 'center center',
+              backgroundRepeat: 'no-repeat'
             }}
           />
         </AnimatePresence>

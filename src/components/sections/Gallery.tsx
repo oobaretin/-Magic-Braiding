@@ -140,9 +140,7 @@ export const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const filteredImages = selectedCategory === 'All' 
-    ? galleryImages 
-    : galleryImages.filter(img => img.category === selectedCategory);
+  const filteredImages = galleryImages;
 
   const openModal = (image: typeof galleryImages[0], index: number) => {
     setSelectedImage(image);
@@ -183,27 +181,6 @@ export const Gallery: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
-                selectedCategory === category
-                  ? 'bg-primary-600 text-white shadow-lg'
-                  : 'bg-white text-secondary-700 hover:bg-primary-50 hover:text-primary-600'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
 
         {/* Gallery Grid */}
         <motion.div
