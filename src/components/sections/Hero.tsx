@@ -6,11 +6,11 @@ import { useBooking } from '@/components/booking/BookingProvider';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const heroImages = [
-  '/images/Screenshot 2025-10-17 at 2.32.07 PM.png',
-  '/images/Screenshot 2025-10-17 at 2.33.04 PM.png',
-  '/images/Screenshot 2025-10-17 at 2.33.26 PM.png',
-  '/images/Screenshot 2025-10-17 at 2.33.47 PM.png',
-  '/images/Screenshot 2025-10-17 at 2.34.23 PM.png',
+  '/images/braid-1.png',
+  '/images/braid-2.png',
+  '/images/braid-3.png',
+  '/images/braid-4.png',
+  '/images/braid-5.png',
 ];
 
 export const Hero: React.FC = () => {

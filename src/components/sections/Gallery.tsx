@@ -7,136 +7,129 @@ import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/2
 const galleryImages = [
   {
     id: '1',
-    src: '/images/Screenshot 2025-10-17 at 2.32.07 PM.png',
+    src: '/images/braid-1.png',
     alt: 'Beautiful box braids styling',
     category: 'Box Braids',
     description: 'Classic box braids with premium hair extensions'
   },
   {
     id: '2',
-    src: '/images/Screenshot 2025-10-17 at 2.33.04 PM.png',
+    src: '/images/braid-2.png',
     alt: 'Elegant goddess braids with curls',
     category: 'Goddess Braids',
     description: 'Stunning goddess braids with added curls and waves'
   },
   {
     id: '3',
-    src: '/images/Screenshot 2025-10-17 at 2.33.26 PM.png',
+    src: '/images/braid-3.png',
     alt: 'Traditional cornrow patterns',
     category: 'Cornrows',
     description: 'Traditional African cornrow braids in various patterns'
   },
   {
     id: '4',
-    src: '/images/Screenshot 2025-10-17 at 2.33.47 PM.png',
+    src: '/images/braid-4.png',
     alt: 'Stylish faux locs',
     category: 'Faux Locs',
     description: 'Beautiful faux locs that mimic natural dreadlocks'
   },
   {
     id: '5',
-    src: '/images/Screenshot 2025-10-17 at 2.34.23 PM.png',
+    src: '/images/braid-5.png',
     alt: 'Medium length box braids',
     category: 'Box Braids',
     description: 'Medium length box braids with natural styling'
   },
   {
     id: '6',
-    src: '/images/Screenshot 2025-10-17 at 2.34.34 PM.png',
+    src: '/images/braid-6.png',
     alt: 'Long goddess braids',
     category: 'Goddess Braids',
     description: 'Long goddess braids with elegant curls'
   },
   {
     id: '7',
-    src: '/images/Screenshot 2025-10-17 at 2.34.53 PM.png',
+    src: '/images/braid-7.png',
     alt: 'Boho style braids',
     category: 'Boho Braids',
     description: 'Trendy boho-style braids with loose waves'
   },
   {
     id: '8',
-    src: '/images/Screenshot 2025-10-17 at 2.35.10 PM.png',
+    src: '/images/braid-8.png',
     alt: 'Children braids styling',
     category: 'Children Braids',
     description: 'Gentle braiding for children with beautiful results'
   },
   {
     id: '9',
-    src: '/images/Screenshot 2025-10-17 at 2.35.37 PM.png',
+    src: '/images/braid-9.png',
     alt: 'Braid maintenance service',
     category: 'Maintenance',
     description: 'Professional braid maintenance and touch-ups'
   },
   {
     id: '10',
-    src: '/images/Screenshot 2025-10-17 at 2.36.34 PM.png',
+    src: '/images/braid-10.png',
     alt: 'Professional braiding work',
     category: 'Box Braids',
     description: 'Expert braiding techniques with beautiful results'
   },
   {
     id: '11',
-    src: '/images/Screenshot 2025-10-17 at 2.36.51 PM.png',
+    src: '/images/braid-11.png',
     alt: 'Stylish hair braiding',
     category: 'Goddess Braids',
     description: 'Elegant styling with professional attention to detail'
   },
   {
     id: '12',
-    src: '/images/Screenshot 2025-10-17 at 2.37.40 PM.png',
+    src: '/images/braid-12.png',
     alt: 'Beautiful braid work',
     category: 'Cornrows',
     description: 'Traditional patterns with modern styling'
   },
   {
     id: '13',
-    src: '/images/Screenshot 2025-10-17 at 2.38.01 PM.png',
+    src: '/images/braid-13.png',
     alt: 'Professional hair styling',
     category: 'Faux Locs',
     description: 'Expert faux locs installation and styling'
   },
   {
     id: '14',
-    src: '/images/Screenshot 2025-10-17 at 2.38.10 PM.png',
+    src: '/images/braid-14.png',
     alt: 'Magic Braiding work',
     category: 'Boho Braids',
     description: 'Beautiful boho-style braids with natural waves'
   },
   {
     id: '15',
-    src: '/images/Screenshot 2025-10-17 at 2.38.36 PM.png',
+    src: '/images/braid-15.png',
     alt: 'Expert braiding services',
     category: 'Children Braids',
     description: 'Gentle and professional braiding for children'
   },
   {
     id: '16',
-    src: '/images/Screenshot 2025-10-17 at 2.38.58 PM.png',
+    src: '/images/braid-16.png',
     alt: 'Professional hair care',
     category: 'Maintenance',
     description: 'Ongoing maintenance and care for beautiful braids'
   },
   {
     id: '17',
-    src: '/images/Screenshot 2025-10-17 at 2.39.29 PM.png',
+    src: '/images/braid-17.png',
     alt: 'Magic Braiding portfolio',
     category: 'Box Braids',
     description: 'Showcasing our professional braiding expertise'
   },
   {
     id: '18',
-    src: '/images/Screenshot 2025-10-17 at 2.40.00 PM.png',
+    src: '/images/braid-18.png',
     alt: 'Beautiful hair transformations',
     category: 'Goddess Braids',
     description: 'Stunning transformations with goddess braids'
-  },
-  {
-    id: '19',
-    src: '/images/Screenshot 2025-10-14 at 12.51.27 AM.png',
-    alt: 'Additional Magic Braiding work',
-    category: 'Box Braids',
-    description: 'More examples of our professional braiding services'
   }
 ];
 
