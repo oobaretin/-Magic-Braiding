@@ -29,12 +29,12 @@ export const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Slideshow */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-primary-700/40 z-10" />
+        <div className="absolute inset-0 bg-primary-700/20 z-10" />
         <AnimatePresence mode="wait">
           <motion.div
             key={currentImageIndex}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.4 }}
+            animate={{ opacity: 0.8 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             className="w-full h-full bg-cover bg-center bg-no-repeat"
