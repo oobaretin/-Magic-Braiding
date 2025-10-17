@@ -247,7 +247,7 @@ export const Gallery: React.FC = () => {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
-                className="relative max-w-4xl max-h-[90vh] w-full"
+                className="relative max-w-6xl max-h-[95vh] w-full flex items-center justify-center"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
@@ -274,7 +274,7 @@ export const Gallery: React.FC = () => {
                 <img
                   src={selectedImage.src}
                   alt={selectedImage.alt}
-                  className="w-full h-full object-contain rounded-lg"
+                  className="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg"
                 />
 
               </motion.div>
