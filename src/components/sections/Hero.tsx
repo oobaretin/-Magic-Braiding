@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { useBooking } from '@/components/booking/BookingProvider';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 
 const heroImages = [
   '/images/braid-1.png',
@@ -16,40 +16,89 @@ const heroImages = [
 export const Hero: React.FC = () => {
   const { openBookingModal } = useBooking();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { scrollY } = useScroll();
+  
+  // Parallax transforms
+  const y1 = useTransform(scrollY, [0, 300], [0, -150]);
+  const y2 = useTransform(scrollY, [0, 300], [0, -100]);
+  const y3 = useTransform(scrollY, [0, 300], [0, -50]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 4000);
+    }, 5000); // Slightly longer for parallax effect
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Slideshow */}
+      {/* Parallax Background Layers */}
       <div className="absolute inset-0 z-0">
+        {/* Background overlay */}
         <div className="absolute inset-0 bg-primary-700/20 z-10" />
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentImageIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.8 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+        
+        {/* Parallax layer 1 - Main image */}
+        <motion.div
+          style={{ y: y1 }}
+          className="absolute inset-0 w-full h-full"
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentImageIndex}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 0.8, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="w-full h-full bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: `url(${heroImages[currentImageIndex]})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            />
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Parallax layer 2 - Secondary image (next in sequence) */}
+        <motion.div
+          style={{ y: y2 }}
+          className="absolute inset-0 w-full h-full opacity-30"
+        >
+          <div
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url(${heroImages[currentImageIndex]})`,
-              backgroundSize: 'contain',
+              backgroundImage: `url(${heroImages[(currentImageIndex + 1) % heroImages.length]})`,
+              backgroundSize: 'cover',
               backgroundPosition: 'center center',
               backgroundRepeat: 'no-repeat'
             }}
           />
-        </AnimatePresence>
+        </motion.div>
+
+        {/* Parallax layer 3 - Third image for depth */}
+        <motion.div
+          style={{ y: y3 }}
+          className="absolute inset-0 w-full h-full opacity-20"
+        >
+          <div
+            className="w-full h-full bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${heroImages[(currentImageIndex + 2) % heroImages.length]})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+        </motion.div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-20 container-custom text-center">
+      {/* Content with Parallax */}
+      <motion.div 
+        style={{ y: y3 }}
+        className="relative z-20 container-custom text-center"
+      >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -97,10 +146,11 @@ export const Hero: React.FC = () => {
             </div>
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
 
-      {/* Slideshow Indicators */}
+      {/* Slideshow Indicators with Parallax */}
       <motion.div
+        style={{ y: y2 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
@@ -119,8 +169,9 @@ export const Hero: React.FC = () => {
         ))}
       </motion.div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator with Parallax */}
       <motion.div
+        style={{ y: y1 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
