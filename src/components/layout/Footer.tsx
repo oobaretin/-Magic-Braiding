@@ -13,21 +13,21 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-3 mb-4">
+            <Link href="/" className="flex items-center mb-4">
               <div className="w-16 h-16 rounded-lg overflow-hidden">
                 <img 
-                  src="/images/logo.png" 
-                  alt="Niki's African Hair Braiding Logo" 
+                  src="/images/magic-braiding-logo.png" 
+                  alt="Magic Braiding Logo" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="boldonse-regular text-2xl text-primary-600">
-                Niki's African Hair Braiding
+              <span className="font-rampart-one text-2xl text-primary-600 -ml-4">
+                Magic Braiding
               </span>
             </Link>
             <p className="text-secondary-300 mb-6">
               Transform your look with expert hair braiding services. Professional, 
-              beautiful, and long-lasting braids in Katy, Texas.
+              beautiful, and long-lasting braids in Richmond, Texas.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
@@ -183,7 +183,7 @@ export const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-secondary-800 text-center">
           <p className="text-secondary-400">
-            © {new Date().getFullYear()} Niki's African Hair Braiding. All rights reserved.
+            © {new Date().getFullYear()} Magic Braiding. All rights reserved.
           </p>
           <p className="text-secondary-500 text-sm mt-2">
             Designed by{' '}

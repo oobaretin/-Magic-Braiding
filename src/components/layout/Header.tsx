@@ -38,16 +38,16 @@ export const Header: React.FC = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-1">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-lg overflow-hidden">
+          <Link href="/" className="flex items-center">
+            <div className="w-32 h-32 md:w-36 md:h-36 rounded-lg overflow-hidden">
               <img 
-                src="/images/logo.png" 
-                alt="Niki's African Hair Braiding Logo" 
+                src="/images/magic-braiding-logo.png" 
+                alt="Magic Braiding Logo" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className="boldonse-regular text-xl md:text-2xl text-primary-600">
-              Niki's African Hair Braiding
+            <span className="font-rampart-one text-2xl md:text-3xl lg:text-4xl text-primary-600 -ml-4">
+              Magic Braiding
             </span>
           </Link>
 

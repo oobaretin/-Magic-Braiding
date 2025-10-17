@@ -45,20 +45,19 @@ export const About: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-bold text-4xl md:text-5xl text-secondary-900 mb-6">
-              About Niki's African Hair Braiding
+              About Magic Braiding
             </h2>
             
             <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
-              Led by industry experts, our beauty brand is committed to delivering premium products 
-              designed to enhance and celebrate individual beauty. We prioritize research, innovation, 
-              and sustainability to ensure every product meets the highest standards of excellence.
+              At Magic Braiding, we believe in the transformative power of beautiful hair. Our skilled 
+              professionals are dedicated to creating stunning braids that enhance your natural beauty 
+              and boost your confidence. We use only the highest quality hair extensions and professional-grade products.
             </p>
             
             <p className="text-lg text-secondary-600 mb-8 leading-relaxed">
-              We are Professional Braiders with more than 20 Years in Service. Our happiness is 
-              the customer happiness. Every appointment is an opportunity to create something 
-              beautiful that reflects your unique style and personality, backed by decades of 
-              expertise and genuine care for our clients.
+              Led by Stella, our experienced braiding specialist with years of expertise, we are committed 
+              to providing exceptional service in a clean, professional environment. Every appointment is 
+              an opportunity to create something magical that reflects your unique style and personality.
             </p>
 
           </motion.div>
@@ -73,8 +72,8 @@ export const About: React.FC = () => {
           >
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/images/about-niki.png" 
-                alt="Niki's African Hair Braiding - About Us" 
+                src="/images/about-stella.png" 
+                alt="Magic Braiding - About Us" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -105,7 +104,7 @@ export const About: React.FC = () => {
               Why Choose Us
             </h3>
             <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-              We're committed to providing exceptional service and results that exceed your expectations.
+              We&apos;re committed to providing exceptional service and results that exceed your expectations.
             </p>
           </div>
 

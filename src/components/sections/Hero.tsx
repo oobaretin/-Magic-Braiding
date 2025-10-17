@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-primary-600 z-10" />
+        <div className="absolute inset-0 bg-primary-700 z-10" />
         <div className="w-full h-full bg-[url('/images/hero-braids.jpg')] bg-cover bg-center bg-no-repeat opacity-20" />
       </div>
 
@@ -24,14 +24,14 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="font-bold text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-            Niki's African Hair Braiding
-            <span className="block text-primary-200">& Boho Hair Styles</span>
+          <h1 className="font-rampart-one text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+            Magic Braiding
+            <span className="block text-primary-200 font-sans font-bold">Professional Hair Services</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Professional African hair braiding and boho hair services in Katy, Texas. 
-            Beautiful, long-lasting braids and trendy boho styles that enhance your natural beauty.
+            Professional hair braiding services in Richmond, Texas. 
+            Beautiful, long-lasting braids and protective styles that enhance your natural beauty.
           </p>
 
           <div className="flex justify-center">

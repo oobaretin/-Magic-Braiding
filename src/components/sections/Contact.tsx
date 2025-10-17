@@ -259,7 +259,7 @@ export const Contact: React.FC = () => {
                 Ready to Book?
               </h3>
               <p className="mb-6 opacity-90">
-                Don't wait! Book your appointment today and experience the difference 
+                Don&apos;t wait! Book your appointment today and experience the difference 
                 of professional hair braiding.
               </p>
               <Button 

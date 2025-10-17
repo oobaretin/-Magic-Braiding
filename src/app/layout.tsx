@@ -1,39 +1,44 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Rampart_One } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { BookingProvider } from '@/components/booking/BookingProvider';
 
 const inter = Inter({ subsets: ['latin'] });
+const rampartOne = Rampart_One({ 
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-rampart-one'
+});
 
 export const metadata: Metadata = {
-  title: 'Niki\'s African Hair Braiding & Boho Hair Seller - Professional Hair Services in Katy, Texas',
-  description: 'Transform your look with expert African hair braiding and boho hair styles at Niki\'s. Located in Katy, Texas. Book your appointment today for stunning braids and boho styles that last.',
-  keywords: 'African hair braiding, boho hair, braids, Katy Texas, hair salon, professional braiding, protective styles, boho hair seller',
-  authors: [{ name: 'Niki\'s African Hair Braiding' }],
-  creator: 'Niki\'s African Hair Braiding',
-  publisher: 'Niki\'s African Hair Braiding',
+  title: 'Magic Braiding - Professional Hair Braiding Services in Richmond, Texas',
+  description: 'Transform your look with expert hair braiding services at Magic Braiding. Located in Richmond, Texas. Book your appointment today for stunning braids that last.',
+  keywords: 'hair braiding, braids, Richmond Texas, hair salon, professional braiding, protective styles, box braids, cornrows, faux locs',
+  authors: [{ name: 'Magic Braiding' }],
+  creator: 'Magic Braiding',
+  publisher: 'Magic Braiding',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://www.nikisafricanbraiding.com'),
+  metadataBase: new URL('https://www.magicbraiding.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Niki\'s African Hair Braiding & Boho Hair Seller - Professional Hair Services',
-    description: 'Transform your look with expert African hair braiding and boho hair styles at Niki\'s. Located in Katy, Texas.',
-    url: 'https://www.nikisafricanbraiding.com',
-    siteName: 'Niki\'s African Hair Braiding',
+    title: 'Magic Braiding - Professional Hair Braiding Services',
+    description: 'Transform your look with expert hair braiding services at Magic Braiding. Located in Richmond, Texas.',
+    url: 'https://www.magicbraiding.com',
+    siteName: 'Magic Braiding',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Niki\'s African Hair Braiding & Boho Hair Seller - Professional Hair Services',
+        alt: 'Magic Braiding - Professional Hair Braiding Services',
       },
     ],
     locale: 'en_US',
@@ -41,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Niki\'s African Hair Braiding & Boho Hair Seller - Professional Hair Services',
-    description: 'Transform your look with expert African hair braiding and boho hair styles at Niki\'s. Located in Katy, Texas.',
+    title: 'Magic Braiding - Professional Hair Braiding Services',
+    description: 'Transform your look with expert hair braiding services at Magic Braiding. Located in Richmond, Texas.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -68,7 +73,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${rampartOne.variable}`}>
         <BookingProvider>
           <div className="min-h-screen flex flex-col">
             <Header />

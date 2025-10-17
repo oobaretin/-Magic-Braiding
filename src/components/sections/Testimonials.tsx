@@ -32,8 +32,8 @@ export const Testimonials: React.FC = () => {
             What Our Clients Say
           </h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients have to say 
-                about their experience with Niki's African Hair Braiding.
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say 
+                about their experience with Magic Braiding.
           </p>
         </motion.div>
 
@@ -64,7 +64,7 @@ export const Testimonials: React.FC = () => {
 
                   {/* Testimonial Text */}
                   <blockquote className="text-secondary-700 mb-6 leading-relaxed">
-                    "{testimonial.comment}"
+                    &ldquo;{testimonial.comment}&rdquo;
                   </blockquote>
 
                   {/* Client Info */}
@@ -103,7 +103,7 @@ export const Testimonials: React.FC = () => {
               Ready to Experience the Difference?
             </h3>
             <p className="text-secondary-600 mb-6">
-                  Join hundreds of satisfied clients who trust Niki's African Hair Braiding for their hair braiding needs.
+                  Join hundreds of satisfied clients who trust Magic Braiding for their hair braiding needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
