@@ -36,7 +36,7 @@ export const Hero: React.FC = () => {
       {/* Parallax Background Layers */}
       <div className="absolute inset-0 z-0">
         {/* Background overlay */}
-        <div className="absolute inset-0 bg-primary-700/20 z-10" />
+        <div className="absolute inset-0 bg-primary-700/10 z-10" />
         
         {/* Parallax layer 1 - Main image */}
         <motion.div
@@ -47,13 +47,13 @@ export const Hero: React.FC = () => {
             <motion.div
               key={currentImageIndex}
               initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 0.8, scale: 1 }}
+              animate={{ opacity: 0.6, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 1.5, ease: "easeInOut" }}
               className="w-full h-full bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(${heroImages[currentImageIndex]})`,
-                backgroundSize: 'cover',
+                backgroundSize: 'contain',
                 backgroundPosition: 'center center',
                 backgroundRepeat: 'no-repeat'
               }}
@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${heroImages[(currentImageIndex + 1) % heroImages.length]})`,
-              backgroundSize: 'cover',
+              backgroundSize: 'contain',
               backgroundPosition: 'center center',
               backgroundRepeat: 'no-repeat'
             }}
@@ -86,7 +86,7 @@ export const Hero: React.FC = () => {
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${heroImages[(currentImageIndex + 2) % heroImages.length]})`,
-              backgroundSize: 'cover',
+              backgroundSize: 'contain',
               backgroundPosition: 'center center',
               backgroundRepeat: 'no-repeat'
             }}
