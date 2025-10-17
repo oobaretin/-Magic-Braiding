@@ -1,0 +1,25 @@
+#!/bin/bash
+cd "/Users/osagieobaretin/braid pro3/magic-braiding/public/images"
+
+# Rename all screenshot files to simple names
+mv "Screenshot 2025-10-14 at 12.51.27 AM.png" "screenshot-0.png"
+mv "Screenshot 2025-10-17 at 2.32.07 PM.png" "screenshot-1.png"
+mv "Screenshot 2025-10-17 at 2.33.04 PM.png" "screenshot-2.png"
+mv "Screenshot 2025-10-17 at 2.33.26 PM.png" "screenshot-3.png"
+mv "Screenshot 2025-10-17 at 2.33.47 PM.png" "screenshot-4.png"
+mv "Screenshot 2025-10-17 at 2.34.23 PM.png" "screenshot-5.png"
+mv "Screenshot 2025-10-17 at 2.34.34 PM.png" "screenshot-6.png"
+mv "Screenshot 2025-10-17 at 2.34.53 PM.png" "screenshot-7.png"
+mv "Screenshot 2025-10-17 at 2.35.10 PM.png" "screenshot-8.png"
+mv "Screenshot 2025-10-17 at 2.35.37 PM.png" "screenshot-9.png"
+mv "Screenshot 2025-10-17 at 2.36.34 PM.png" "screenshot-10.png"
+mv "Screenshot 2025-10-17 at 2.36.51 PM.png" "screenshot-11.png"
+mv "Screenshot 2025-10-17 at 2.37.40 PM.png" "screenshot-12.png"
+mv "Screenshot 2025-10-17 at 2.38.01 PM.png" "screenshot-13.png"
+mv "Screenshot 2025-10-17 at 2.38.10 PM.png" "screenshot-14.png"
+mv "Screenshot 2025-10-17 at 2.38.36 PM.png" "screenshot-15.png"
+mv "Screenshot 2025-10-17 at 2.38.58 PM.png" "screenshot-16.png"
+mv "Screenshot 2025-10-17 at 2.39.29 PM.png" "screenshot-17.png"
+mv "Screenshot 2025-10-17 at 2.40.00 PM.png" "screenshot-18.png"
+
+echo "Renamed all screenshot files"
