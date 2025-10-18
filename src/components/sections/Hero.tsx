@@ -36,7 +36,7 @@ export const Hero: React.FC = () => {
       {/* Parallax Background Layers */}
       <div className="absolute inset-0 z-0">
         {/* Background overlay */}
-        <div className="absolute inset-0 bg-primary-700/10 z-10" />
+        <div className="absolute inset-0 bg-primary-700/5 z-10" />
         
         {/* Parallax layer 1 - Main image */}
         <motion.div
@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
             <motion.div
               key={currentImageIndex}
               initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 0.6, scale: 1 }}
+              animate={{ opacity: 0.9, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 4, ease: "easeInOut" }}
               className="w-full h-full bg-cover bg-center bg-no-repeat"
@@ -74,12 +74,12 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="font-rampart-one text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-            Magic Braiding
-            <span className="block text-primary-200 font-sans font-bold">Professional Hair Services</span>
-          </h1>
+              <h1 className="font-rampart-one text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight drop-shadow-2xl">
+                Magic Braiding
+                <span className="block text-primary-200 font-sans font-bold drop-shadow-lg">Professional Hair Services</span>
+              </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/95 mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
             Professional hair braiding services in Richmond, Texas. 
             Beautiful, long-lasting braids and protective styles that enhance your natural beauty.
           </p>
@@ -102,16 +102,16 @@ export const Hero: React.FC = () => {
             className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">20+</div>
-              <div className="text-white/80">Years Experience</div>
+              <div className="text-3xl font-bold text-white mb-2 drop-shadow-lg">20+</div>
+              <div className="text-white/90 drop-shadow-md">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">1000+</div>
-              <div className="text-white/80">Happy Clients</div>
+              <div className="text-3xl font-bold text-white mb-2 drop-shadow-lg">1000+</div>
+              <div className="text-white/90 drop-shadow-md">Happy Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">5★</div>
-              <div className="text-white/80">Average Rating</div>
+              <div className="text-3xl font-bold text-white mb-2 drop-shadow-lg">5★</div>
+              <div className="text-white/90 drop-shadow-md">Average Rating</div>
             </div>
           </motion.div>
         </motion.div>

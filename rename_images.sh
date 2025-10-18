@@ -23,3 +23,4 @@ mv "Screenshot 2025-10-17 at 2.39.29 PM.png" "screenshot-17.png"
 mv "Screenshot 2025-10-17 at 2.40.00 PM.png" "screenshot-18.png"
 
 echo "Renamed all screenshot files"
+
