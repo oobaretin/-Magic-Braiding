@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
             <Link href="/" className="flex items-center mb-4">
               <div className="w-16 h-16 rounded-lg overflow-hidden">
                 <img 
-                  src="/images/magic-braiding-logo.png" 
+                  src="/images/magicbraidslogo.png" 
                   alt="Magic Braiding Logo" 
                   className="w-full h-full object-contain"
                 />

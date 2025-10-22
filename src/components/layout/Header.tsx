@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
           <Link href="/" className="flex items-center">
             <div className="w-32 h-32 md:w-36 md:h-36 rounded-lg overflow-hidden">
               <img 
-                src="/images/magic-braiding-logo.png" 
+                src="/images/magicbraidslogo.png" 
                 alt="Magic Braiding Logo" 
                 className="w-full h-full object-contain"
               />
