@@ -30,7 +30,7 @@ export const Services: React.FC = () => {
             </h3>
             <p className="text-lg text-secondary-600 mb-8">
               For information about our hair braiding services, please contact us directly. 
-              We'll be happy to discuss your needs and provide details about our offerings.
+              We&apos;ll be happy to discuss your needs and provide details about our offerings.
             </p>
           </div>
         </div>
