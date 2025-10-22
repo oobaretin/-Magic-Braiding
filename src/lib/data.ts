@@ -1,5 +1,107 @@
-import { Testimonial, GalleryImage, BusinessHours, SocialLink } from '@/types';
+import { Service, Testimonial, GalleryImage, BusinessHours, SocialLink } from '@/types';
 
+export const services: Service[] = [
+  {
+    id: 'box-braids',
+    name: 'Box Braids',
+    description: 'Classic African box braids with premium synthetic or human hair extensions. Perfect for protective styling and low maintenance.',
+    price: 120,
+    duration: '4-6 hours',
+    category: 'braids',
+    features: [
+      'Premium hair extensions included',
+      'Scalp protection treatment',
+      'Styling tips included',
+      '2-week follow-up consultation'
+    ],
+    popular: true,
+  },
+  {
+    id: 'boho-braids',
+    name: 'Boho Braids',
+    description: 'Trendy boho-style braids with loose, natural waves and effortless beauty for a free-spirited look.',
+    price: 140,
+    duration: '5-7 hours',
+    category: 'braids',
+    features: [
+      'Boho hair extensions included',
+      'Custom wave pattern',
+      'Natural styling techniques',
+      'Maintenance guide included'
+    ],
+    popular: true,
+  },
+  {
+    id: 'cornrows',
+    name: 'Cornrows',
+    description: 'Traditional African cornrow braids in various patterns and designs for a timeless, cultural look.',
+    price: 80,
+    duration: '2-3 hours',
+    category: 'braids',
+    features: [
+      'Custom pattern design',
+      'Scalp massage included',
+      'Protective styling tips',
+      'Touch-up recommendations'
+    ],
+  },
+  {
+    id: 'goddess-braids',
+    name: 'Goddess Braids',
+    description: 'Elegant goddess braids with added curls and waves for a stunning, versatile look.',
+    price: 150,
+    duration: '5-7 hours',
+    category: 'braids',
+    features: [
+      'Premium curly hair extensions',
+      'Custom curl pattern',
+      'Heat protection treatment',
+      'Maintenance guide included'
+    ],
+  },
+  {
+    id: 'faux-locs',
+    name: 'Faux Locs',
+    description: 'Beautiful faux locs that mimic natural dreadlocks without the commitment.',
+    price: 180,
+    duration: '6-8 hours',
+    category: 'braids',
+    features: [
+      'Premium loc hair included',
+      'Custom length and thickness',
+      'Installation care guide',
+      '3-week follow-up included'
+    ],
+  },
+  {
+    id: 'braid-maintenance',
+    name: 'Braid Maintenance',
+    description: 'Professional maintenance service to keep your braids looking fresh and healthy.',
+    price: 60,
+    duration: '2-3 hours',
+    category: 'maintenance',
+    features: [
+      'Scalp cleansing and conditioning',
+      'Loose braid repair',
+      'Edge touch-ups',
+      'Styling refresh'
+    ],
+  },
+  {
+    id: 'consultation',
+    name: 'Hair Consultation',
+    description: 'Personalized consultation to determine the best braiding style for your hair type and lifestyle.',
+    price: 25,
+    duration: '30 minutes',
+    category: 'consultation',
+    features: [
+      'Hair health assessment',
+      'Style recommendations',
+      'Maintenance planning',
+      'Product recommendations'
+    ],
+  },
+];
 
 export const testimonials: Testimonial[] = [
   {
