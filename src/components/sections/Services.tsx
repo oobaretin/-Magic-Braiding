@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronRight, Clock, Calendar, Phone, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { BookingModal } from '@/components/booking/BookingModal';
 
 // Magic Braiding Salon Information
 const SALON_INFO = {
@@ -611,6 +612,8 @@ export const Services: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [expandedVariations, setExpandedVariations] = useState<{[key: string]: boolean}>({});
+  const [showBookingModal, setShowBookingModal] = useState(false);
+  const [selectedService, setSelectedService] = useState<any>(null);
   const toggleCategory = (category: string) => {
     if (selectedCategory === category) {
       setSelectedCategory(null);
@@ -634,6 +637,16 @@ export const Services: React.FC = () => {
       ...prev,
       [key]: !prev[key]
     }));
+  };
+
+  const handleBookingClick = (serviceName: string, variation: any) => {
+    setSelectedService({ serviceName, variation });
+    setShowBookingModal(true);
+  };
+
+  const handleCloseBooking = () => {
+    setShowBookingModal(false);
+    setSelectedService(null);
   };
 
   return (
@@ -728,7 +741,7 @@ export const Services: React.FC = () => {
                           {data.variations.map((variation, idx) => (
                             <div
                               key={idx}
-                              onClick={() => window.open(`tel:${SALON_INFO.phone}`, '_self')}
+                              onClick={() => handleBookingClick(subcategory, variation)}
                               className="border-2 border-primary-200 rounded-lg p-4 hover:bg-primary-50 hover:border-primary-400 cursor-pointer transition-all duration-200 hover:shadow-md"
                             >
                               <div className="flex justify-between items-start mb-2">
@@ -759,6 +772,12 @@ export const Services: React.FC = () => {
           </motion.div>
         )}
 
+        {/* Booking Modal */}
+        <BookingModal
+          isOpen={showBookingModal}
+          onClose={handleCloseBooking}
+          selectedService={selectedService}
+        />
       </div>
     </section>
   );
