@@ -1,11 +1,7 @@
 'use client';
 
 import React from 'react';
-import { services } from '@/lib/data';
-import { formatPrice } from '@/lib/utils';
-import { Card, CardContent } from '@/components/ui/Card';
 import { motion } from 'framer-motion';
-import { StarIcon, ClockIcon } from '@heroicons/react/24/solid';
 
 export const Services: React.FC = () => {
   return (
