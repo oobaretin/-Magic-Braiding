@@ -38,6 +38,11 @@ export const BookingProvider: React.FC<BookingProviderProps> = ({ children }) =>
       }}
     >
       {children}
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={closeBookingModal}
+        selectedService={selectedService ? { serviceName: 'General Service', variation: { name: 'Contact for Details', duration: 'Varies', price: 0 } } : undefined}
+      />
     </BookingContext.Provider>
   );
 };
