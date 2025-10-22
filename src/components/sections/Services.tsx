@@ -611,9 +611,6 @@ export const Services: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [expandedVariations, setExpandedVariations] = useState<{[key: string]: boolean}>({});
-  const [selectedService, setSelectedService] = useState<any>(null);
-  const [showBookingModal, setShowBookingModal] = useState(false);
-
   const toggleCategory = (category: string) => {
     if (selectedCategory === category) {
       setSelectedCategory(null);
@@ -637,16 +634,6 @@ export const Services: React.FC = () => {
       ...prev,
       [key]: !prev[key]
     }));
-  };
-
-  const handleBookingClick = (serviceName: string, variation: any) => {
-    setSelectedService({ serviceName, variation });
-    setShowBookingModal(true);
-  };
-
-  const handleBookingSuccess = (bookingData: any) => {
-    setShowBookingModal(false);
-    console.log('Booking successful:', bookingData);
   };
 
   return (
@@ -741,7 +728,7 @@ export const Services: React.FC = () => {
                           {data.variations.map((variation, idx) => (
                             <div
                               key={idx}
-                              onClick={() => handleBookingClick(subcategory, variation)}
+                              onClick={() => window.open(`tel:${SALON_INFO.phone}`, '_self')}
                               className="border-2 border-primary-200 rounded-lg p-4 hover:bg-primary-50 hover:border-primary-400 cursor-pointer transition-all duration-200 hover:shadow-md"
                             >
                               <div className="flex justify-between items-start mb-2">
