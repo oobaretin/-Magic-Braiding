@@ -110,7 +110,12 @@ export const Header: React.FC = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full" onClick={() => openBookingModal()}>Book Now</Button>
+                <a 
+                  href="/services"
+                  className="block w-full text-center px-4 py-2 border-2 border-primary-600 text-primary-600 rounded-lg font-medium hover:bg-primary-600 hover:text-white transition-colors duration-200"
+                >
+                  Book Now
+                </a>
               </div>
             </div>
           </div>
