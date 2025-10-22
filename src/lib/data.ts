@@ -1,35 +1,6 @@
 import { Service, Testimonial, GalleryImage, BusinessHours, SocialLink } from '@/types';
 
-export const services: Service[] = [
-  {
-    id: 'braid-maintenance',
-    name: 'Braid Maintenance',
-    description: 'Professional maintenance service to keep your braids looking fresh and healthy.',
-    price: 60,
-    duration: '2-3 hours',
-    category: 'maintenance',
-    features: [
-      'Scalp cleansing and conditioning',
-      'Loose braid repair',
-      'Edge touch-ups',
-      'Styling refresh'
-    ],
-  },
-  {
-    id: 'consultation',
-    name: 'Hair Consultation',
-    description: 'Personalized consultation to determine the best braiding style for your hair type and lifestyle.',
-    price: 25,
-    duration: '30 minutes',
-    category: 'consultation',
-    features: [
-      'Hair health assessment',
-      'Style recommendations',
-      'Maintenance planning',
-      'Product recommendations'
-    ],
-  },
-];
+export const services: Service[] = [];
 
 export const testimonials: Testimonial[] = [
   {

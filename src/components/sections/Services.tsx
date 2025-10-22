@@ -27,55 +27,27 @@ export const Services: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="h-full"
-            >
-              <Card className="h-full flex flex-col">
-                {service.popular && (
-                  <div className="bg-primary-600 text-white px-4 py-2 text-center text-sm font-medium">
-                    <StarIcon className="w-4 h-4 inline mr-1" />
-                    Most Popular
-                  </div>
-                )}
-                
-                <CardContent className="flex-1 pt-8">
-                  <h3 className="font-display font-semibold text-2xl text-secondary-900 mb-3">
-                    {service.name}
-                  </h3>
-                  
-                  <p className="text-secondary-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center text-secondary-500">
-                      <ClockIcon className="w-5 h-5 mr-2" />
-                      <span className="text-sm">{service.duration}</span>
-                    </div>
-                    <div className="text-2xl font-bold text-primary-600">
-                      {formatPrice(service.price)}
-                    </div>
-                  </div>
-
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0" />
-                        <span className="text-secondary-600 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+        <div className="text-center py-16">
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-2xl font-semibold text-secondary-900 mb-4">
+              Professional Hair Braiding Services
+            </h3>
+            <p className="text-lg text-secondary-600 mb-8">
+              We offer a wide range of professional hair braiding services tailored to your unique style and needs. 
+              Our expert stylists provide beautiful, long-lasting braids with premium materials and expert craftsmanship.
+            </p>
+            <div className="bg-primary-50 rounded-lg p-6 mb-8">
+              <h4 className="font-semibold text-primary-900 mb-3">What We Offer:</h4>
+              <ul className="text-left space-y-2 text-primary-800">
+                <li>• Box Braids & Boho Braids</li>
+                <li>• Goddess Braids & Cornrows</li>
+                <li>• Faux Locs & Twist Braids</li>
+                <li>• Children's Braiding Services</li>
+                <li>• Braid Maintenance & Touch-ups</li>
+                <li>• Hair Consultations</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <motion.div
