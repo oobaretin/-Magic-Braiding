@@ -1,15 +1,3 @@
-export interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  duration: string;
-  category: 'braids' | 'maintenance' | 'styling' | 'consultation';
-  image?: string;
-  features: string[];
-  popular?: boolean;
-}
-
 export interface Appointment {
   id: string;
   serviceId: string;

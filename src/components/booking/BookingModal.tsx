@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { XMarkIcon, CalendarIcon, ClockIcon } from '@heroicons/react/24/outline';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
-import { services } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
 const bookingSchema = z.object({
@@ -56,7 +55,6 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   });
 
   const selectedServiceId = watch('serviceId');
-  const selectedServiceData = services.find(s => s.id === selectedServiceId);
 
   const onSubmit = async (data: BookingFormData) => {
     setIsSubmitting(true);
@@ -141,50 +139,19 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                           Select a Service
                         </h3>
                         
-                        <div className="grid gap-4">
-                          {services.map((service) => (
-                            <label
-                              key={service.id}
-                              className={`relative cursor-pointer rounded-lg border-2 p-4 transition-all duration-200 ${
-                                selectedServiceId === service.id
-                                  ? 'border-primary-500 bg-primary-50'
-                                  : 'border-secondary-200 hover:border-secondary-300'
-                              }`}
-                            >
-                              <input
-                                type="radio"
-                                value={service.id}
-                                {...register('serviceId')}
-                                className="sr-only"
-                              />
-                              
-                              <div className="flex justify-between items-start">
-                                <div className="flex-1">
-                                  <h4 className="font-semibold text-secondary-900">
-                                    {service.name}
-                                  </h4>
-                                  <p className="text-secondary-600 text-sm mt-1">
-                                    {service.description}
-                                  </p>
-                                  <div className="flex items-center mt-2 text-sm text-secondary-500">
-                                    <ClockIcon className="w-4 h-4 mr-1" />
-                                    {service.duration}
-                                  </div>
-                                </div>
-                                
-                                <div className="text-right ml-4">
-                                  <div className="text-lg font-bold text-primary-600">
-                                    {formatPrice(service.price)}
-                                  </div>
-                                  {service.popular && (
-                                    <div className="text-xs text-accent-600 font-medium">
-                                      Popular
-                                    </div>
-                                  )}
-                                </div>
-                              </div>
+                        <div className="space-y-4">
+                          <div>
+                            <label htmlFor="serviceDescription" className="block text-sm font-medium text-secondary-700 mb-2">
+                              Service Description
                             </label>
-                          ))}
+                            <textarea
+                              id="serviceDescription"
+                              {...register('serviceId')}
+                              placeholder="Please describe the hair braiding service you're interested in (e.g., Box Braids, Goddess Braids, Cornrows, etc.)"
+                              className="w-full px-3 py-2 border border-secondary-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                              rows={3}
+                            />
+                          </div>
                         </div>
                         
                         {errors.serviceId && (

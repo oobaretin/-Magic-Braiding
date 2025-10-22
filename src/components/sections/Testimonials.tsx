@@ -11,10 +11,10 @@ export const Testimonials: React.FC = () => {
   const { openBookingModal } = useBooking();
 
   const handleViewGallery = () => {
-    // For now, we'll scroll to the services section since we don't have a gallery page yet
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    // Scroll to the gallery section
+    const gallerySection = document.getElementById('gallery');
+    if (gallerySection) {
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 

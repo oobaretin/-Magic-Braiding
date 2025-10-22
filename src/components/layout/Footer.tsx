@@ -74,9 +74,6 @@ export const Footer: React.FC = () => {
             <h3 className="font-display font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="text-secondary-300 hover:text-white transition-colors duration-200">
-                  Services
-                </Link>
               </li>
               <li>
                 <Link href="/gallery" className="text-secondary-300 hover:text-white transition-colors duration-200">
@@ -96,37 +93,6 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="font-display font-semibold text-lg mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/services#box-braids" className="text-secondary-300 hover:text-white transition-colors duration-200">
-                  Box Braids
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#boho-braids" className="text-secondary-300 hover:text-white transition-colors duration-200">
-                  Boho Braids
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#goddess-braids" className="text-secondary-300 hover:text-white transition-colors duration-200">
-                  Goddess Braids
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#cornrows" className="text-secondary-300 hover:text-white transition-colors duration-200">
-                  Cornrows
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#faux-locs" className="text-secondary-300 hover:text-white transition-colors duration-200">
-                  Faux Locs
-                </Link>
-              </li>
-            </ul>
-          </div>
 
           {/* Contact Info */}
           <div>
