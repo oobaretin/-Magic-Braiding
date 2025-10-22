@@ -30,23 +30,12 @@ export const Services: React.FC = () => {
         <div className="text-center py-16">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl font-semibold text-secondary-900 mb-4">
-              Professional Hair Braiding Services
+              Contact Us for Services
             </h3>
             <p className="text-lg text-secondary-600 mb-8">
-              We offer a wide range of professional hair braiding services tailored to your unique style and needs. 
-              Our expert stylists provide beautiful, long-lasting braids with premium materials and expert craftsmanship.
+              For information about our hair braiding services, please contact us directly. 
+              We'll be happy to discuss your needs and provide details about our offerings.
             </p>
-            <div className="bg-primary-50 rounded-lg p-6 mb-8">
-              <h4 className="font-semibold text-primary-900 mb-3">What We Offer:</h4>
-              <ul className="text-left space-y-2 text-primary-800">
-                <li>• Box Braids & Boho Braids</li>
-                <li>• Goddess Braids & Cornrows</li>
-                <li>• Faux Locs & Twist Braids</li>
-                <li>• Children's Braiding Services</li>
-                <li>• Braid Maintenance & Touch-ups</li>
-                <li>• Hair Consultations</li>
-              </ul>
-            </div>
           </div>
         </div>
 
