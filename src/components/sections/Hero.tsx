@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
-import { useBooking } from '@/components/booking/BookingProvider';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 
 const heroImages = [
@@ -14,7 +13,6 @@ const heroImages = [
 ];
 
 export const Hero: React.FC = () => {
-  const { openBookingModal } = useBooking();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { scrollY } = useScroll();
   
@@ -85,13 +83,12 @@ export const Hero: React.FC = () => {
           </p>
 
           <div className="flex justify-center">
-            <Button 
-              size="lg" 
-              className="bg-white text-primary-600 hover:bg-primary-50"
-              onClick={() => openBookingModal()}
+            <a 
+              href="/services"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-600 bg-white rounded-lg hover:bg-primary-50 transition-colors duration-200"
             >
               Book Your Appointment
-            </Button>
+            </a>
           </div>
 
           {/* Trust Indicators */}

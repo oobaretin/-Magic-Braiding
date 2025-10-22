@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
-import { useBooking } from '@/components/booking/BookingProvider';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
@@ -20,7 +19,6 @@ export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  const { openBookingModal } = useBooking();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,13 +69,12 @@ export const Header: React.FC = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="outline"
-              className="border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white"
-              onClick={() => openBookingModal()}
+            <a
+              href="/services"
+              className="inline-flex items-center px-4 py-2 border-2 border-primary-600 text-primary-600 rounded-lg font-medium hover:bg-primary-600 hover:text-white transition-colors duration-200"
             >
               Book Now
-            </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
