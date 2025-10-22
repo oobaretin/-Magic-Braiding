@@ -707,7 +707,7 @@ export const Services: React.FC = () => {
             </h2>
 
             <div className="space-y-4">
-              {Object.entries(SALON_DATA[selectedCategory]).map(([subcategory, data]) => {
+              {Object.entries(SALON_DATA[selectedCategory as keyof typeof SALON_DATA]).map(([subcategory, data]) => {
                 const isExpanded = selectedSubcategory === subcategory;
                 const variationKey = `${selectedCategory}-${subcategory}`;
                 const showVariations = expandedVariations[variationKey];
